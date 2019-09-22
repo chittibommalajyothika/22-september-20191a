@@ -1,0 +1,28 @@
+#include<stdio.h>
+int occurrence(int a[],int n,int c)
+{
+    int i,r=0;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==c)
+            r++;
+    }
+        return r;
+}
+int main()
+{
+   int a[8],i,c,n,j;
+   scanf("%d",&n);
+    for(i=0;i<n;i++)
+   {
+       scanf("%d",&a[i]);
+   }
+
+   scanf("%d",&c);
+   j=occurrence(a,n,c);
+    if(j==0)
+        printf("-1");
+    else
+        printf("%d",j);
+    return 0;
+}
